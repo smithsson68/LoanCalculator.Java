@@ -1,6 +1,6 @@
 package loancalculator.application;
 
-import loancalculator.library.domainObjects.Lender;
+import loancalculator.library.domainobjects.Lender;
 import loancalculator.library.repositories.CsvLenderRepository;
 import loancalculator.library.repositories.LenderRepository;
 

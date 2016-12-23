@@ -1,4 +1,4 @@
-package loancalculator.library.domainObjects;
+package loancalculator.library.domainobjects;
 
 import java.math.BigDecimal;
 

@@ -1,6 +1,6 @@
 package loancalculator.library.repositories;
 
-import loancalculator.library.domainObjects.Lender;
+import loancalculator.library.domainobjects.Lender;
 
 import com.opencsv.CSVReader;
 
