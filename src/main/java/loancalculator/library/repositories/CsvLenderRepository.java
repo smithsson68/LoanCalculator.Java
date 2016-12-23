@@ -26,7 +26,7 @@ public class CsvLenderRepository implements LenderRepository {
 
     public List<Lender> list() {
 
-        try(CSVReader reader = new CSVReader(this.reader)) {
+        try (CSVReader reader = new CSVReader(this.reader, ',', '\'', 1)) {
 
             String[] line;
             ArrayList<Lender> lenders = new ArrayList<>();
@@ -35,8 +35,13 @@ public class CsvLenderRepository implements LenderRepository {
                 Lender lender = new Lender(line[0], new BigDecimal(line[1]), new Integer(line[2]));
                 lenders.add(lender);
             }
+
+            return lenders;
+
         } catch (IOException e) {
             Logger.getGlobal().log(Level.SEVERE, "Error reading CSV file", e);
+        } catch (Exception e) {
+            Logger.getGlobal().log(Level.SEVERE, "Error processing CSV file", e);
         }
 
         return null;

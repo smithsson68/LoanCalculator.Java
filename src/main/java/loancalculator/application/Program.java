@@ -15,7 +15,7 @@ import java.util.List;
 public class Program {
     public static void main(String[] args){
 
-        String lendersFilePath = "~/IdeaProjects/LoanCalculator/Lenders.csv";
+        String lendersFilePath = "/home/zopadev/IdeaProjects/LoanCalculator/Lenders.csv";
 
         try{
             LenderRepository lr = new CsvLenderRepository(new FileReader(lendersFilePath));
