@@ -2,7 +2,6 @@ package loancalculator.library.validators.defaultloaninputvalidator;
 
 import loancalculator.library.validators.DefaultLoanInputValidator;
 import loancalculator.library.validators.ValidationException;
-import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -11,25 +10,25 @@ import java.util.Arrays;
 import java.util.Collection;
 
 /**
- * Created by zopadev on 23/12/16.
+ * Created by paul on 29/12/2016.
  */
 
 @RunWith(Parameterized.class)
-public class WhenValueOutOfRange {
+public class WhenValueInRangeButNotMulipleOf100 {
 
     private int input;
 
     @Parameterized.Parameters
     public static Collection inputs() {
         return Arrays.asList(new Object[][]{
-                {-1, null},
-                {0, null},
-                {999, null},
-                {15001, null}
+                {1001, null},
+                {2020, null},
+                {5050, null},
+                {14999, null}
         });
     }
 
-    public WhenValueOutOfRange(int input, Object unused) {
+    public WhenValueInRangeButNotMulipleOf100(int input, Object unused) {
         this.input = input;
     }
 

@@ -5,7 +5,7 @@ apply plugin: 'java'
 
 repositories {
     maven {
-        url "http://packages.dns.ad.zopa.com/artifactory/maven-repo1-remote/"
+        url "http://repo2.maven.org/maven2/"
     }
 }
 
